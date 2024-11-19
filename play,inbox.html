@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./vic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=edit" />
+</head>
+<body>
+    <section class="container2">
+        <nav>
+            <ul>
+                <li><a class="active" href="./play,inbox.html">Play</a></li>
+                <li><a href="./inbox.html">Inbox</a></li>
+                <li id="set"><a href="#">⨀</a></li>
+            </ul>
+
+            <div id="closeDiv">
+                <ol>
+                    <li><a href="">log out</a></li>
+                    <li><a href="">help</a></li>
+                    <li><a id="close" href="">cancle</a></li>
+                </ol>
+            </div>
+        </nav>
+
+        <div class="slides">
+            <div class="details">
+                <div class="imgs">
+                    <img id="profile-picture" src="https://via.placeholder.com/150" alt="Profile Picture">
+                    <span class="pen-icon" onclick="triggerFileInput()"><span class="material-symbols-outlined">
+                        edit
+                        </span></span>
+                    <input type="file" id="profilePicInput" onchange="changeProfilePic(event)">
+                </div>
+                <div class="texts">
+                    <p>Send me anonymous <br> messages!</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="links">
+            <div class="card2">
+                <h1>Step 1: Copy your link</h1>
+                <p>NGL.LINK/DIVINE23454</p>
+                <button class="btn1">copy link</button>
+            </div>
+            <div class="card2">
+                <h1>Step 2 : Share linl on your story</h1>
+                <button class="btn2">share!</button>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="./app.js"></script>
+</body>
+</html>
