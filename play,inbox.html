@@ -24,21 +24,24 @@
                 </ol>
             </div>
         </nav>
-
         <div class="slides">
             <div class="details">
                 <div class="imgs">
+                    <!-- Profile Picture -->
                     <img id="profile-picture" src="https://via.placeholder.com/150" alt="Profile Picture">
+                    <!-- Edit Icon -->
                     <span class="pen-icon" onclick="triggerFileInput()">
                         <span class="material-symbols-outlined">edit</span>
                     </span>
-                    <input type="image" id="profilePicInput" onchange="changeProfilePic(event)" style="display:none;">
+                    <!-- Hidden File Input for Profile Picture, only accepts images -->
+                    <input type="file" id="profilePicInput" onchange="changeProfilePic(event)" style="display:none;" accept="image/*">
                 </div>
                 <div class="texts">
                     <p>Send me anonymous <br> messages!</p>
                 </div>
             </div>
         </div>
+        
         
         
 

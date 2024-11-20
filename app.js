@@ -12,8 +12,8 @@
             });
         });
 
- // Load profile picture and background image from localStorage when the page loads
- window.onload = function() {
+// Load profile picture and background image from localStorage when the page loads
+window.onload = function() {
     // Retrieve saved profile picture from localStorage
     const savedProfilePic = localStorage.getItem('profilePic');
     if (savedProfilePic) {
@@ -42,7 +42,6 @@ function changeProfilePic(event) {
             localStorage.setItem('profilePic', newImageSrc);
 
             // Optionally, set and save the background image of the profile container
-            document.querySelector('.details').style.backgroundColor = '#fff'; // Reset background color to white
             document.querySelector('.details').style.backgroundImage = `url(${newImageSrc})`; // Set background image
 
             // Save the background image URL in localStorage as well
@@ -57,11 +56,6 @@ function triggerFileInput() {
     document.getElementById('profilePicInput').click();
 }
 
-
-  // Trigger the file input when pen icon is clicked
-  function triggerFileInput() {
-    document.getElementById('profilePicInput').click();
-  }
 
 
   const toggleButton = document.getElementById('set');
