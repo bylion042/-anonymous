@@ -23,7 +23,7 @@
     // Retrieve saved background image from localStorage
     const savedBackgroundImage = localStorage.getItem('backgroundImage');
     if (savedBackgroundImage) {
-        document.querySelector('.details').style.backgroundImage = url(${savedBackgroundImage});
+        document.querySelector('.details').style.backgroundImage = `url(${savedBackgroundImage})`;
     }
 };
 
@@ -43,7 +43,7 @@ function changeProfilePic(event) {
 
             // Optionally, set and save the background image of the profile container
             document.querySelector('.details').style.backgroundColor = '#fff'; // Reset background color to white
-            document.querySelector('.details').style.backgroundImage = url(${newImageSrc}); // Set background image
+            document.querySelector('.details').style.backgroundImage = `url(${newImageSrc})`; // Set background image
 
             // Save the background image URL in localStorage as well
             localStorage.setItem('backgroundImage', newImageSrc);
