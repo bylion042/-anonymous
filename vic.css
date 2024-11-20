@@ -19,9 +19,11 @@
 }
 
 .container{
+    width: 100%;
     color: var(--background-color);
     background-color: var(--body-color);
-    padding: 3rem 3rem 0;
+    display: flex;
+    justify-content: center;
     height: 100vh;
 }
 
@@ -48,8 +50,9 @@
 footer{
     position: fixed;
     bottom: 5rem;
+    left: 0;
     text-align: center;
-    padding: 0 3rem;
+    padding: 0 2rem;
     font-size: .85rem;
 }
 
@@ -60,6 +63,7 @@ footer p a{
 /* whant.html */
 .title{
     text-align: center;
+    margin-top: 2rem;
 }
 
 .card{
@@ -167,7 +171,7 @@ nav ol {
 
 .details{
     width: 80%;
-    margin: 3rem auto 2rem;
+    margin: 3rem auto 5rem;
     background-color: #ff330018;
     object-fit: cover;
     background-position: center;
@@ -221,7 +225,7 @@ nav ol {
     background-color: var(--cards-color);
     text-align: center;
     padding: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     border-radius: var(--link-b-redius);
 }
 
