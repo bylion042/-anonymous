@@ -12,8 +12,8 @@
             });
         });
 
-// Load profile picture and background image from localStorage when the page loads
-window.onload = function() {
+ // Load profile picture and background image from localStorage when the page loads
+ window.onload = function() {
     // Retrieve saved profile picture from localStorage
     const savedProfilePic = localStorage.getItem('profilePic');
     if (savedProfilePic) {
@@ -23,18 +23,13 @@ window.onload = function() {
     // Retrieve saved background image from localStorage
     const savedBackgroundImage = localStorage.getItem('backgroundImage');
     if (savedBackgroundImage) {
-        document.querySelector('.details').style.backgroundImage = `url(${savedBackgroundImage})`;
+        document.querySelector('.details').style.backgroundImage = url(${savedBackgroundImage});
     }
 };
 
-// Function to trigger the file input
-function triggerFileInput() {
-    document.getElementById('profilePicInput').click(); // Triggers the file input to open
-}
-
 // Function to change profile picture and background image, and save them in localStorage
 function changeProfilePic(event) {
-    const file = event.target.files[0]; // Get the selected file
+    const file = event.target.files[0];
     if (file) {
         const reader = new FileReader();
         reader.onload = function(e) {
@@ -48,15 +43,14 @@ function changeProfilePic(event) {
 
             // Optionally, set and save the background image of the profile container
             document.querySelector('.details').style.backgroundColor = '#fff'; // Reset background color to white
-            document.querySelector('.details').style.backgroundImage = `url(${newImageSrc})`; // Set background image
+            document.querySelector('.details').style.backgroundImage = url(${newImageSrc}); // Set background image
 
             // Save the background image URL in localStorage as well
             localStorage.setItem('backgroundImage', newImageSrc);
         };
-        reader.readAsDataURL(file); // Convert the selected file to base64
+        reader.readAsDataURL(file);
     }
 }
-
 
 // Trigger the file input dialog when the pen icon is clicked
 function triggerFileInput() {
