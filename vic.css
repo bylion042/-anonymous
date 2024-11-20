@@ -8,7 +8,7 @@
 :root{
     --body-color: black;
     --background-color: #ffffff;
-    --cards-color: #ddd8d84b;
+    --cards-color: #b0adad4b;
     --text-span-color: gray;
     --border-color: #ff3300;
     --text-colo: #000000;
@@ -118,13 +118,15 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    color: var(--cards-color);
+    color: var(--text-colo);
+    opacity: 0.3;
     font-size: var(--link-size);
     font-weight: var(--link-weight);
 }
 
 .active{
     color: var(--text-colo);
+    opacity: 1;
 }
 
 #set{
@@ -138,7 +140,7 @@ nav ul li a{
     top: 0;
     left: 0;
     padding: 0 1rem 6rem;
-    background-color: #c5c1c17a;
+    background-color: #c5c1c1a8;
     height: 100vh;
     z-index: 100;
 }
@@ -171,8 +173,9 @@ nav ol {
 
 .details{
     width: 80%;
-    margin: 3rem auto 5rem;
+    margin: 3rem auto 4rem;
     background-color: #ff330018;
+    background-repeat: no-repeat;
     object-fit: cover;
     background-position: center;
     padding: 1.5rem;

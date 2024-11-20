@@ -27,9 +27,14 @@ window.onload = function() {
     }
 };
 
+// Function to trigger the file input
+function triggerFileInput() {
+    document.getElementById('profilePicInput').click(); // Triggers the file input to open
+}
+
 // Function to change profile picture and background image, and save them in localStorage
 function changeProfilePic(event) {
-    const file = event.target.files[0];
+    const file = event.target.files[0]; // Get the selected file
     if (file) {
         const reader = new FileReader();
         reader.onload = function(e) {
@@ -48,9 +53,10 @@ function changeProfilePic(event) {
             // Save the background image URL in localStorage as well
             localStorage.setItem('backgroundImage', newImageSrc);
         };
-        reader.readAsDataURL(file);
+        reader.readAsDataURL(file); // Convert the selected file to base64
     }
 }
+
 
 // Trigger the file input dialog when the pen icon is clicked
 function triggerFileInput() {
